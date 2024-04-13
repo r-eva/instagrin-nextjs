@@ -4,5 +4,6 @@ import getUser from "@/app/helper/action";
 export default async function Home() {
   const user = await getUser();
   console.log(user);
-  return <AuthForm />;
+  // return <AuthForm />;
+  return<StartingPageContent/>
 }

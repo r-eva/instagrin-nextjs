@@ -1,4 +1,5 @@
 import Sidebar from "../sidebar/sidebar";
+import Suggested from "../suggested/suggested";
 import classes from "./starting-page.module.css";
 
 function StartingPageContent() {
@@ -7,7 +8,7 @@ function StartingPageContent() {
   return (
     <section className={classes.starting}>
       <Sidebar />
-      <h1>Welcome on Board!</h1>
+      <Suggested/>
     </section>
   );
 }
