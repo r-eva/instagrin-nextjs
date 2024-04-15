@@ -4,5 +4,29 @@
     "name": "reginaeva",
     "password": "hello123",
     "email": "hello@reginaeva.de"
+  },
+  {
+    "id": 2,
+    "name": "cornelialia",
+    "password": "hello1234",
+    "email": "hello@cornelia.gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Alice",
+    "password": "alice123",
+    "email": "alice@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Kevin",
+    "password": "Kevin1234",
+    "email": "kevin@example.com"
+  }, 
+  {
+    "id": 5,
+    "name": "Charlie",
+    "password": "Charlie123",
+    "email": "charlie@example.com"
   }
 ]
