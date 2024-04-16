@@ -1,37 +1,23 @@
 "use client";
-
-import { useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 
-function AuthForm() {
-  const [isLogin, setIsLogin] = useState(true);
+function LoginForm() {
+  const userNameInputRef = useRef();
+  const passwordInputRef = useRef();
 
-  function switchAuthModeHandler() {
-    setIsLogin((prevState) => !prevState);
-  }
+  function submitHandler(event) {
+    event.preventDefault();
 
-  {
-    /* <h1>{isLogin ? "Login" : "Sign Up"}</h1>
-      <form>
-        <div className={classes.control}>
-          <label htmlFor="email">Your Email</label>
-          <input type="email" id="email" required />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor="password">Your Password</label>
-          <input type="password" id="password" required />
-        </div>
-        <div className={classes.actions}>
-          <button>{isLogin ? "Login" : "Create Account"}</button>
-          <button
-            type="button"
-            className={classes.toggle}
-            onClick={switchAuthModeHandler}
-          >
-            {isLogin ? "Create new account" : "Login with existing account"}
-          </button>
-        </div>
-      </form> */
+    const enteredEmail = emailInputRef.current.value;
+    const enteredPassword = passwordInputRef.current.value;
+    const enteredUserNameInputRef = userNameInputRef.current.value;
+
+    if (isLogin) {
+      //log user in
+    } else {
+      createUser();
+    }
   }
 
   return (
@@ -44,11 +30,13 @@ function AuthForm() {
         <input
           placeholder="username"
           className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-grey-500 bg-gray-100 text-black"
-        ></input>
+          ref={userNameInputRef}
+        />
         <input
           placeholder="password"
           className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-grey-500 bg-gray-100 text-black"
-        ></input>
+          ref={passwordInputRef}
+        />
         <Link href="/auth">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
             Login
@@ -67,4 +55,4 @@ function AuthForm() {
   );
 }
 
-export default AuthForm;
+export default LoginForm;
