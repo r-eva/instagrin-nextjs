@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Link from "next/link";
 
 async function createUser(email, username, password) {
-  const response = await fetch("/api/auth", {
+  const response = await fetch("/api/register-users/", {
     method: "POST",
     body: JSON.stringify({ email, username, password }),
     headers: {
