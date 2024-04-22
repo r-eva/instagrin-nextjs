@@ -6,6 +6,11 @@ function StartingPageContent() {
     <section className={classes.starting}>
       <Sidebar />
       <h1>Welcome on Board!</h1>
+      <div>
+        <p>
+          <h1>ha</h1>
+        </p>
+      </div>
     </section>
   );
 }
